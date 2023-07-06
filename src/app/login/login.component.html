@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="image-container">
+    <img/>
+  </div>
+<div class="login-container">
+  <div class="info-page">
+    <img src="../../assets/casabela.svg" alt="Logo Container" />
+    <h1>Plataforma de Incentivos Exclusiva da Casabella Inspirada no Metaverso</h1>
+  </div>
+  <div class="form-container">
+    <label class="text-tile">Informe seu usuário e senha para acessar</label>
+    <form (ngSubmit)="onSubmit()">
+      <div class="acess-content">
+        <div class="access">
+          <input class="input-access" type="text" id="email" name="email" [(ngModel)]="username" required
+            (focus)="isInputFocused = true" (blur)="isInputFocused = false">
+          <label for="email" class="label-access" [ngClass]="{'active': isInputFocused || username}">
+            E-mail
+          </label>
+        </div>
+        <div class="access">
+          <input class="input-access" type="password" id="password" name="password" [(ngModel)]="password" required
+            (focus)="isInputFocused = true" (blur)="isInputFocused = false">
+          <label for="password" class="label-access" [ngClass]="{'active': isInputFocused || password}">
+            Senha
+          </label>
+        </div>
+      </div>
+      <div class="recovery">
+        <div class="checkbox-container">
+          <input type="checkbox" id="savePassword" name="savePassword" [(ngModel)]="savePassword">
+          <label for="savePassword">Lembrar senha</label>
+        </div>
+        <button type="button" class="outlined-button">Esqueceu a senha?</button>
+      </div>
+      <div class="button-content">
+        <button type="submit" class="login-button">Entrar</button>
+      </div>
+    </form>
+    <hr class="separator-line" />
+    <div class="login-footer">
+      <label>Não tem conta?</label>
+      <p class="outlined-button">Cadastre-se</p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
